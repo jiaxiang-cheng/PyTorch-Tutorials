@@ -12,4 +12,5 @@ conda activate demo
 ```angular2html
 conda install -c pytorch pytorch
 conda install -c pytorch torchvision
+conda install matplotlib
 ```
