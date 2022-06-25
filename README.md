@@ -1,4 +1,4 @@
-# PyTorch-Tutotials
+# PyTorch Tutorials
 Simple implementation for basic tasks.
 
 
