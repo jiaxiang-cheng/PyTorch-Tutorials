@@ -1,6 +1,6 @@
 """ source: https://nextjournal.com/gkoehler/pytorch-mnist """
 
-# ============================ Setting up the Environment ============================ #
+# ========================================= Setting up the Environment =============================================== #
 
 # We will be using PyTorch to train a convolutional neural network (CNN) to recognize MNIST's handwritten digits.
 # PyTorch is a very popular framework for deep learning like Tensorflow, CNTK and Caffe2.
@@ -8,7 +8,7 @@
 import torch
 import torchvision
 
-# ============================= Preparing the Dataset ================================ #
+# =========================================== Preparing the Dataset ================================================== #
 
 # With the imports in place we can go ahead and prepare the data we'll be using. But before that we'll define the
 # hyper-parameters we'll be using for the experiment. Here the number of epochs defines how many times we'll loop over
@@ -83,7 +83,7 @@ for i in range(6):
     plt.yticks([])
 plt.show()
 
-# ============================ Building the Network ============================ #
+# =========================================== Building the Network =================================================== #
 
 # Now let's go ahead and build our network. We'll use two 2-D convolutional layers followed by two fully-connected
 # (or linear) layers. As activation function we'll choose rectified linear units (ReLU) and as a means of
@@ -233,8 +233,7 @@ for i in range(6):
     plt.subplot(2, 3, i + 1)
     plt.tight_layout()
     plt.imshow(example_data[i][0], cmap='gray', interpolation='none')
-    plt.title("Prediction: {}".format(
-        output.data.max(1, keepdim=True)[1][i].item()))
+    plt.title("Prediction: {}".format(output.data.max(1, keepdim=True)[1][i].item()))
     plt.xticks([])
     plt.yticks([])
 plt.show()
