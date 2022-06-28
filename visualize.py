@@ -4,11 +4,8 @@ import torch
 import matplotlib.pyplot as plt
 
 
-def plot_examples_before(test_loader):
-    examples = enumerate(test_loader)
-    batch_idx, (example_data, example_targets) = next(examples)
-
-    fig = plt.figure()
+def plot_examples_before(example_data, example_targets):
+    # fig = plt.figure()
     for i in range(6):
         plt.subplot(2, 3, i + 1)
         plt.tight_layout()
@@ -19,14 +16,8 @@ def plot_examples_before(test_loader):
     plt.show()
 
 
-def plot_examples_after(test_loader, network):
-    examples = enumerate(test_loader)
-    batch_idx, (example_data, example_targets) = next(examples)
-
-    with torch.no_grad():
-        output = network(example_data)
-
-    fig = plt.figure()
+def plot_examples_after(example_data, output):
+    # fig = plt.figure()
     for i in range(6):
         plt.subplot(2, 3, i + 1)
         plt.tight_layout()
